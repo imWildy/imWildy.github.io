@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.title-container {
+    position: relative;
+    padding-left: 15%;
+    top: 23vh
+}
+
+.title {
+    color: white;
+    font-size: 5vh;
+    margin: 0;
+    position: absolute;
+    flex-wrap: nowrap;
+    width: 180%;
+    user-select: none;
+}
+
+.title-wildy {
+    animation: color-fade .7s ease-in-out .1s forwards;
+    transition: all .4s;
+}
+
+.title-wildy:hover {
+    cursor: pointer;
+    transform: scale(1.2) rotate(1deg) skewX(1deg);
+    transition: all .4s;
+}
+
+@keyframes color-fade {
+    0% {
+        color: white;
+    }
+    100% {
+        color: #2121ff;
+    }
+}
+
+@keyframes slide-left {
+    to {
+        left: -70px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    to {
+        top: -130px;
+        right: -152px;
+        opacity: 0.3;
+    }
+}
+.wave {
+    position: absolute;
+    aspect-ratio: 900/600;
+    height: 300%;
+    left: -300px;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+    animation: slide-left 0.6s ease-out .5s forwards;
+    background-image: url('../imgs/layered-waves-left.svg');
+}
+
+.saturn {
+    position: absolute;
+    top: -630px;
+    right: -652px;
+    opacity: 0;
+    z-index: -1;
+    animation: slide-in 1.3s ease .3s forwards;
+}
+
+.about-container {
+    position: relative;
+    background-color: #282727;
+    top: 33%;
+    left: 12%;
+    height: 15%;
+    border-radius: 1em;
+    box-shadow: 16px 14px 20px #0000008c;
+}
+
+.about {
+    list-style: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.skills {
+    position: absolute;
+    top: 100vh;
+    width: 100vw;   
+    color: white;
+    font-size: 1.73rem;
+    justify-content: center;
+}
+
+.skills-container {
+    position: absolute;
+    justify-content: center;
+    top: 5vh;
+    width: 50vw;
+    height: 10vh;
+    gap: 1vw;
+}
+
+.skill {
+    position: relative;
+    background-color: #282727;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 65px;
+    font-size: 35px;
+    box-shadow: 16px 14px 20px #0000008c;
+    transition: all .2s;
+}
+
+.skill a {
+    user-select: none;
+    text-decoration: none;
+}
+
+.skill:hover {
+    filter: blur(0.6px);
+}
+
+.javascript:hover {
+    box-shadow: 0 0 .6em yellow;
+}
+
+.typescript:hover {
+    box-shadow: 0 0 .6em rgb(0, 68, 255);
+}
+
+.html:hover {
+    box-shadow: 0 0 .6em orangered;
+}
+
+.css:hover {
+    box-shadow: 0 0 .6em rgb(0, 157, 255);
+}
+
+.react:hover {
+    box-shadow: 0 0 .6em rgb(0, 225, 255)
+}
+
+.nextjs:hover {
+    box-shadow: 0 0 .6em purple;
+}
+
+.tailwind:hover {
+    box-shadow: 0 0 .6em rgb(0, 157, 255);
+}
+
+.nodejs:hover {
+    box-shadow: 0 0 .6em greenyellow;
+}
+
+.discordjs:hover {
+    box-shadow: 0 0 .6em purple;
+}
+
+.python:hover {
+    box-shadow: 0 0 .6em yellow;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0s;
+};
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.skills-container:nth-child(1) { transition-delay: 100ms; }
+.skills-container:nth-child(2) { transition-delay: 200ms; }
+.skills-container:nth-child(3) { transition-delay: 300ms; }
+.skills-container:nth-child(4) { transition-delay: 350ms; }
+.skills-container:nth-child(5) { transition-delay: 400ms; }
+.skills-container:nth-child(6) { transition-delay: 450ms; }
+.skills-container:nth-child(7) { transition-delay: 500ms; }
+.skills-container:nth-child(8) { transition-delay: 550ms; }
+.skills-container:nth-child(9) { transition-delay: 650ms; }
+.skills-container:nth-child(10) { transition-delay: 750ms; }
