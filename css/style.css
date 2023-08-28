@@ -253,14 +253,21 @@ body {
     }
 }
 
-@media (width: 810px) {
+@media (width: 810px) { /*iPad Support (Still needs work)*/
     .title {
-        width: 500%;
+        width: 225%;
     }
     @keyframes slide-right {
         to {
-            left: -170px;
+            left: -190px;
             opacity: 1;
+        }
+    }
+    @keyframes slide-in {
+        to {
+            top: -190px;
+            right: -240px;
+            opacity: 0.3;
         }
     }
     .about-container {
@@ -298,8 +305,5 @@ body {
     .skills-container {
         top: 15vh;
         gap: 5vw;
-    }
-    .skill {
-        transform: scaleX(1.5);
     }
 }
