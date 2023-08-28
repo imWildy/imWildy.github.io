@@ -253,13 +253,14 @@ body {
     }
 }
 
-@media (min-width: 810px) {
+@media (width: 810px) {
     .title {
         width: 500%;
     }
     @keyframes slide-right {
         to {
-            left: -130px;
+            left: -170px;
+            opacity: 1;
         }
     }
     .about-container {
