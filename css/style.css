@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Inconsolata:wght@300&display=swap');
 
 body {
     background-image: linear-gradient(230deg, #000000, #807b7b);
@@ -129,6 +129,37 @@ body {
     text-decoration: none;
     color: black
 }
+
+.label {
+    visibility: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    font-size: 50%;
+    width: 105%;
+    height: 80%;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    top: 140%;
+    margin-top: -20px;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.label-text {
+    font-family: 'Inconsolata', monospace;
+    position: relative;
+    top: -10px !important;
+}
+
+.contact:hover .label {
+    visibility: visible;
+    filter: none !important;
+    opacity: 1;
+}
+
 
 .skills {
     position: absolute;
